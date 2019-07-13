@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман](https://up.htmlacademy.ru/adaptive/17/user/949721).
-* Наставник: `Неизвестно`.
+* Наставник: Екатирина Кунец (https://htmlacademy.ru/profile/id465085).
 
 ---
 
