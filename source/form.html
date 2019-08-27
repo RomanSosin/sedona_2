@@ -46,21 +46,21 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__wrapper form-about__wrapper">
           <legend class="form-about__title">Представтесь</legend>
-          <label for="form-about__name">Имя*:</label>
-          <input id="form-about__name" name="name" type="text" value="Петр"  required autofocus>
-          <label for="form-about__surname">Фамилия*:</label>
-          <input id="form-about__surname" name="surname" type="text" value="Иванов" required>
-          <label for="form-about__middle-name">Отчество</label>
-          <input id="form-about__middle-name" name="middle-name" type="text" value="Александрович">
+          <label for="user-name">Имя*:</label>
+          <input id="user-name" class="form-about__name" name="name" type="text" value="Петр"  required autofocus>
+          <label for="user-surname">Фамилия*:</label>
+          <input id="user-surname" class="form-about__surname" name="surname" type="text" value="Иванов" required>
+          <label for="user-middle-name">Отчество</label>
+          <input id="user-middle-name" class="form-about__middle-name" name="middle-name" type="text" value="Александрович">
         </fieldset>
-        <fieldset class="form-contacts__wrapper">
+        <fieldset class="form-wrapper form-contacts__wrapper">
             <legend class="form-contacts__title">Контактная информация:</legend>
-            <label for="form-contacts__phone">Контактный телефон*:</label>
-            <input id="form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
-            <label for="form-contacts__mail">Электронная почта*:</label>
-            <input id="form-contacts__mail" type="email" value="Введите e-mail" required>
+            <label for="user-phone">Контактный телефон*:</label>
+            <input id="user-phone" class="form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
+            <label for="user-mail">Электронная почта*:</label>
+            <input id="user-mail" class="form-contacts__mail" type="email" value="Введите e-mail" required>
         </fieldset>
-        <fieldset class="form-impression__wrapper">
+        <fieldset class="form-wrapper form-impression__wrapper">
           <legend class="form-impression__title">Ваше общее впечатление</legend>
           <label for="impression-positive">Скорее положительные</label>
           <input id="impression-positive" class="form-impression__good" type="radio" value="impression-good" name="impression">
@@ -69,7 +69,7 @@
           <label for="impression-not-sure">Затрудняюсь ответить</label>
           <input id="impression-not-sure" class="form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
         </fieldset>
-        <fieldset class="form-attraction__wrapper">
+        <fieldset class="form-wrapper form-attraction__wrapper">
           <legend class="form-attraction__title">Посещенные достопримечательности</legend>
           <label for="devil-bridge">Мост Дьявола</label>
           <input id="devil-bridge" class="form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
@@ -80,7 +80,7 @@
           <label for="red-rock">Красные скалы</label>
           <input id="red-rock" class="form-attraction__red-rock" type="checkbox" name="red-rock">
         </fieldset>
-        <fieldset class="form-review__wrapper">
+        <fieldset class="form-wrapper form-review__wrapper">
           <legend class="form-review__title">Опишите свои эмоции:</legend>
           <textarea id="review-text" name="form-review" rows="6">Опишите подробно все свои восторги</textarea>
         </fieldset>
