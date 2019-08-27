@@ -54,11 +54,21 @@
           <input id="form-about__middle-name" name="middle-name" type="text" value="Александрович">
         </fieldset>
         <fieldset class="form-contacts__wrapper">
-            <legend class="form-contacts">Контактная информация:</legend>
+            <legend class="form-contacts__title">Контактная информация:</legend>
             <label for="form-contacts__phone">Контактный телефон*:</label>
             <input id="form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
             <label for="form-contacts__mail">Электронная почта*:</label>
             <input id="form-contacts__mail" type="email" value="Введите e-mail" required>
+        </fieldset>
+        <fieldset class="form-impression__wrapper">
+          <legend class="form-impression__title">Ваше общее впечатление</legend>
+          <label for="impression-positive">Скорее положительные</label>
+          <input id="impression-positive" class="form-impression__good" type="radio" value="impression-good" name="impression">
+          <label for="impression-negative">Скорее отрицательное</label>
+          <input id="impression-negative" class="form-impression__negative" type="radio" value="impression-negative" name="impression">
+          <label for="impression-not-sure">Затрудняюсь ответить</label>
+          <input id="impression-not-sure" class="form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
+
         </fieldset>
       </form>
     </section>
