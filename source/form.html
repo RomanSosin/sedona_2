@@ -53,7 +53,13 @@
           <label for="form-about__middle-name">Отчество</label>
           <input id="form-about__middle-name" name="middle-name" type="text" value="Александрович">
         </fieldset>
-
+        <fieldset class="form-contacts__wrapper">
+            <legend class="form-contacts">Контактная информация:</legend>
+            <label for="form-contacts__phone">Контактный телефон*:</label>
+            <input id="form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
+            <label for="form-contacts__mail">Электронная почта*:</label>
+            <input id="form-contacts__mail" type="email" value="Введите e-mail" required>
+        </fieldset>
       </form>
     </section>
           <!-- Тут будет форма -->
