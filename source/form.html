@@ -47,46 +47,46 @@
 
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__wrapper form-about__wrapper">
-          <legend class="form-about__title">Представтесь</legend>
-          <label for="user-name">Имя*:</label>
-          <input id="user-name" class="form-about__name" name="name" type="text" value="Петр"  required autofocus>
-          <label for="user-surname">Фамилия*:</label>
-          <input id="user-surname" class="form-about__surname" name="surname" type="text" value="Иванов" required>
-          <label for="user-middle-name">Отчество</label>
-          <input id="user-middle-name" class="form-about__middle-name" name="middle-name" type="text" value="Александрович">
+          <legend class="form__title form-about__title">Представтесь:</legend>
+          <label class="form__label" for="user-name">Имя*:</label>
+          <input id="user-name" class="form__input form-about__name" name="name" type="text" value="Петр"  required autofocus>
+          <label class="form__label" for="user-surname">Фамилия*:</label>
+          <input id="user-surname" class="form__input form-about__surname" name="surname" type="text" value="Иванов" required>
+          <label class="form__label" for="user-middle-name">Отчество</label>
+          <input id="user-middle-name" class="form__input form-about__middle-name" name="middle-name" type="text" value="Александрович">
         </fieldset>
         <fieldset class="form-wrapper form-contacts__wrapper">
-            <legend class="form-contacts__title">Контактная информация:</legend>
-            <label for="user-phone">Контактный телефон*:</label>
-            <input id="user-phone" class="form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
-            <label for="user-mail">Электронная почта*:</label>
-            <input id="user-mail" class="form-contacts__mail" type="email" value="Введите e-mail" required>
+            <legend class="form__title form-contacts__title">Контактная информация:</legend>
+            <label class="form__label" for="user-phone">Контактный телефон*:</label>
+            <input id="user-phone" class="form__input form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
+            <label class="form__label" for="user-mail">Электронная почта*:</label>
+            <input id="user-mail" class="form__input form-contacts__mail" type="email" value="Введите e-mail" required>
         </fieldset>
         <fieldset class="form-wrapper form-impression__wrapper">
-          <legend class="form-impression__title">Ваше общее впечатление</legend>
-          <label for="impression-positive">Скорее положительные</label>
-          <input id="impression-positive" class="form-impression__good" type="radio" value="impression-good" name="impression">
-          <label for="impression-negative">Скорее отрицательное</label>
-          <input id="impression-negative" class="form-impression__negative" type="radio" value="impression-negative" name="impression">
-          <label for="impression-not-sure">Затрудняюсь ответить</label>
-          <input id="impression-not-sure" class="form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
+          <legend class="form__title form-impression__title">Ваше общее впечатление:</legend>
+          <label class="form__label--radio" for="impression-positive">Скорее положительные</label>
+          <input id="impression-positive" class="form__input form-impression__good" type="radio" value="impression-good" name="impression">
+          <label class="form__label--radio" for="impression-negative">Скорее отрицательное</label>
+          <input id="impression-negative" class="form__input form-impression__negative" type="radio" value="impression-negative" name="impression">
+          <label class="form__label--radio" for="impression-not-sure">Затрудняюсь ответить</label>
+          <input id="impression-not-sure" class="form__input form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
         </fieldset>
         <fieldset class="form-wrapper form-attraction__wrapper">
-          <legend class="form-attraction__title">Посещенные достопримечательности</legend>
-          <label for="devil-bridge">Мост Дьявола</label>
-          <input id="devil-bridge" class="form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
-          <label for="bell-mountain">Гора Колокол</label>
-          <input id="bell-mountain" class="form-attraction__bell-mountain" type="checkbox" name="bell-mountain" checked>
-          <label for="slide-park">Слайд-парк</label>
-          <input id="slide-park" class="form-attraction__slide-park" type="checkbox" name="slide-park" checked>
-          <label for="red-rock">Красные скалы</label>
-          <input id="red-rock" class="form-attraction__red-rock" type="checkbox" name="red-rock">
+          <legend class="form__title form-attraction__title">Посещенные достопримечательности:</legend>
+          <label class="form__label--chechbox" for="devil-bridge">Мост Дьявола</label>
+          <input id="devil-bridge" class="form__input form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
+          <label class="form__label--checkbox" for="bell-mountain">Гора Колокол</label>
+          <input id="bell-mountain" class="form__input form-attraction__bell-mountain" type="checkbox" name="bell-mountain" checked>
+          <label class="form__label--checkbox" for="slide-park">Слайд-парк</label>
+          <input id="slide-park" class="form__input form-attraction__slide-park" type="checkbox" name="slide-park" checked>
+          <label class="form__label--checkbox" for="red-rock">Красные скалы</label>
+          <input id="red-rock" class="form__input form-attraction__red-rock" type="checkbox" name="red-rock">
         </fieldset>
         <fieldset class="form-wrapper form-review__wrapper">
-          <legend class="form-review__title">Опишите свои эмоции:</legend>
-          <textarea id="review-text" name="form-review" rows="6">Опишите подробно все свои восторги</textarea>
+          <legend class="form__title form-review__title">Опишите свои эмоции:</legend>
+          <textarea class="form__input" id="review-text" name="form-review" rows="6">Опишите подробно все свои восторги</textarea>
         </fieldset>
-        <input class="button form-button" name="form-button" type="submit" value="отправить отзыв">
+        <input class="form__send button__review" name="form-button" type="submit" value="отправить отзыв">
       </form>
 
     </section>
