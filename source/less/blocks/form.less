@@ -1,3 +1,9 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
 .form__title {
   text-transform: uppercase;
   font-size: 18px;
@@ -10,10 +16,19 @@
   font-size: 14px;
   line-height: 26px;
   color: #333333;
+
+  padding: 0;
+  margin: 0;
+  border: 1px solid red;
 }
 
 .form__input {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
   background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
 .form__send {
@@ -24,3 +39,29 @@
   font-weight: 700;
   background-color: #81b3d2;
 }
+
+    /*Блок Form-about */
+
+.form-about__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-about__label {
+  align-self: center;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.form-about__input {
+  min-height: 58px;
+  width: 150px;
+  padding-left: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+
