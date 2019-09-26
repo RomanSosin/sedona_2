@@ -65,12 +65,20 @@
         </fieldset>
         <fieldset class="form__wrapper form-impression__wrapper">
           <legend class="form__title form-impression__title">Ваше общее впечатление:</legend>
-          <label class="form__label--radio" for="impression-positive">Скорее положительные</label>
-          <input id="impression-positive" class="form__input form-impression__good" type="radio" value="impression-good" name="impression">
-          <label class="form__label--radio" for="impression-negative">Скорее отрицательное</label>
-          <input id="impression-negative" class="form__input form-impression__negative" type="radio" value="impression-negative" name="impression">
-          <label class="form__label--radio" for="impression-not-sure">Затрудняюсь ответить</label>
-          <input id="impression-not-sure" class="form__input form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
+          <ul class="form-impression__list">
+            <li class="form-impression__item">
+              <input id="impression-positive" class="form-impression__radio form-impression__good" type="radio" value="impression-good" name="impression">
+              <label class="form__label--radio form-impression__label" for="impression-positive">Скорее положительные</label>
+            </li>
+            <li class="form-impression__item">
+              <input id="impression-negative" class="form-impression__radio form-impression__negative" type="radio" value="impression-negative" name="impression">
+              <label class="form__label--radio form-impression__label" for="impression-negative">Скорее отрицательное</label>
+            </li>
+            <li class="form-impression__item">
+              <input id="impression-not-sure" class="form-impression__radio form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
+              <label class="form__label--radio form-impression__label" for="impression-not-sure">Затрудняюсь ответить</label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__wrapper form-attraction__wrapper">
           <legend class="form__title form-attraction__title">Посещенные достопримечательности:</legend>
