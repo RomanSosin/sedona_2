@@ -1,23 +1,41 @@
 .gallery {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
 
   font-size: 14px;
   line-height: 24px;
+
+  border: 1px solid red;
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
 }
 
 .gallery__title {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
 }
 
 .gallery__author {
+  margin: 0;
+  padding: 0;
   text-transform: none;
   font-style: normal;
   color: #333333;
+  border: 1px solid red;
 }
 
 .gallery__like {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   color: #000000;
+  border: 1px solid red;
 }
