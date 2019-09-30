@@ -27,7 +27,7 @@
   border: 1px solid red;
 }
 
-.form__label--radio {
+.form__label--radio, .form__label--checkbox {
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -99,7 +99,7 @@
 
     /* Блок Form-contacts */
 
-  .form-contacts__wrapper {
+.form-contacts__wrapper {
   display: flex;
   flex-direction: column;
       /* не уверен нужно ли тут бордер-бокс*/
@@ -108,55 +108,42 @@
   margin: 0;
   padding: 0;
   padding-bottom: 14px;
-  }
+}
 
-  .form-contacts__title {
+.form-contacts__title {
   align-self: flex-start;
   text-align: center;
   padding-top: 20px;
   margin-bottom: 26px;
-  }
+}
 
-  .form-contacts__label {
+.form-contacts__label {
   align-self: flex-start;
   margin-left: 41px;
-  }
+}
 
-  .form-contacts__phone, .form-contacts__mail {
+.form-contacts__phone, .form-contacts__mail {
   margin: 0;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 9px;
   margin-bottom: 14px;
-  }
+}
 
     /* Блок Impression */
 
-  .form-impression__wrapper {
+.form-impression__wrapper {
   margin: 0;
   padding: 0;
-  }
+}
 
-  /*
-  .form-impression__title {
-  margin-bottom: 44px;
+
+.form-impression__title {
   padding-top: 20px;
   text-align: center;
-  }
+}
 
-
-  .form-impression__label {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    border: 1px solid red;
-  }
-*/
-  .form-impression__title {
-  padding-top: 20px;
-  text-align: center;
-  }
-
-  .form-impression__list {
+.form-impression__list {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -164,31 +151,71 @@
 
   margin: 0;
   padding: 0;
-  }
+}
 
-  .form-impression__item {
+.form-impression__item {
     display: flex;
     margin: 0;
     margin-bottom: 24px;
     padding: 0;
     border: 1px solid green;
-  }
+}
 
-  .form-impression__item:last-child {
+.form-impression__item:last-child {
     margin-bottom: 42px;
-  }
+}
 
-  .form-impression__radio {
+.form-impression__radio {
     align-self: center;
     margin: 0;
     margin-left: 40px;
     margin-right: 40px;
     padding: 0;
-  }
+}
 
-  .form-impression__label {
+.form-impression__label {
     border: 1px solid red;
-  }
+}
 
+    /* Блок Attrsaction */
 
+.form-attraction__wrapper {
+  margin: 0;
+  padding: 0;
+}
 
+.form-attraction__title {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.form-attraction__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 1px solid red;
+
+  margin: 0;
+  padding: 0;
+}
+
+.form-attraction__item {
+  display: flex;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  border: 1px solid green;
+}
+
+.form-attraction__checkbox {
+  align-self: center;
+  margin: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0;
+}
+
+    /* Блок Review */
+.form-review__title {
+  text-align: center;
+}
