@@ -85,7 +85,7 @@
           <ul class="form-attraction__list">
             <li class="form-attraction__item">
               <input id="devil-bridge" class="form-attraction__checkbox form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
-              <label class="form__label--chechbox" for="devil-bridge">Мост Дьявола</label>
+              <label class="form__label--checkbox" for="devil-bridge">Мост Дьявола</label>
             </li>
             <li class="form-attraction__item">
               <input id="bell-mountain" class="form-attraction__checkbox form-attraction__bell-mountain" type="checkbox" name="bell-mountain" checked>
@@ -103,7 +103,9 @@
         </fieldset>
         <fieldset class="form__wrapper form-review__wrapper">
           <legend class="form__title form-review__title">Опишите свои эмоции:</legend>
-          <textarea class="form-review__input" id="review-text" name="form-review" rows="6">Опишите подробно все свои восторги</textarea>
+          <div class="form-review__wrapper">
+          <textarea class="form-review__input" id="review-text" name="form-review" rows="4" cols="0">Опишите подробно все свои восторги</textarea>
+          </div>
         </fieldset>
         <input class="form__send button__review" name="form-button" type="submit" value="отправить отзыв">
       </form>
