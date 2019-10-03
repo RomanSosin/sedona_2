@@ -27,7 +27,8 @@
   border: 1px solid red;
 }
 
-.form__label--radio, .form__label--checkbox {
+.form__label--radio,
+.form__label--checkbox {
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -37,7 +38,7 @@
 }
 
 .form__input {
-      /* Делаем так, чтобы напись не вылезала за границы input */
+  /* Делаем так, чтобы напись не вылезала за границы input */
   box-sizing: border-box;
   margin: 0;
   margin-bottom: 16px;
@@ -69,9 +70,8 @@
   border: 0;
 }
 
-    /*Блок Form-about */
-
 .form-about__wrapper {
+  /*Блок Form-about */
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -87,7 +87,7 @@
 }
 
 .form-about__label {
-      /* Выравниваем относительно input */
+  /* Выравниваем относительно input */
   align-self: center;
   margin: 0;
   margin-right: 14px;
@@ -97,18 +97,17 @@
 .form-about__input {
   margin-left: 20px;
   margin-right: 20px;
-      /* делаем с двух сторон марджин, чтоб не убегал лайбл от центра выравнивание */
+  /* делаем с двух сторон марджин, чтоб не убегал лайбл от центра выравнивание */
   margin-top: 10px;
   margin-bottom: 10px;
   flex-grow: 1;
 }
 
-    /* Блок Form-contacts */
-
 .form-contacts__wrapper {
+  /* Блок Form-contacts */
   display: flex;
   flex-direction: column;
-      /* не уверен нужно ли тут бордер-бокс*/
+  /* не уверен нужно ли тут бордер-бокс*/
   box-sizing: border-box;
   width: 320px;
   margin: 0;
@@ -128,7 +127,8 @@
   margin-left: 41px;
 }
 
-.form-contacts__phone, .form-contacts__mail {
+.form-contacts__phone,
+.form-contacts__mail {
   margin: 0;
   margin-left: 20px;
   margin-right: 20px;
@@ -136,13 +136,11 @@
   margin-bottom: 14px;
 }
 
-    /* Блок Impression */
-
 .form-impression__wrapper {
+  /* Блок Impression */
   margin: 0;
   padding: 0;
 }
-
 
 .form-impression__title {
   padding-top: 20px;
@@ -160,32 +158,31 @@
 }
 
 .form-impression__item {
-    display: flex;
-    margin: 0;
-    margin-bottom: 24px;
-    padding: 0;
-    border: 1px solid green;
+  display: flex;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border: 1px solid green;
 }
 
 .form-impression__item:last-child {
-    margin-bottom: 42px;
+  margin-bottom: 42px;
 }
 
 .form-impression__radio {
-    align-self: center;
-    margin: 0;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 0;
+  align-self: center;
+  margin: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0;
 }
 
 .form-impression__label {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
-    /* Блок Attrsaction */
-
 .form-attraction__wrapper {
+  /* Блок Attrsaction */
   margin: 0;
   padding: 0;
 }
@@ -200,7 +197,6 @@
   flex-direction: column;
   list-style: none;
   border: 1px solid red;
-
   margin: 0;
   padding: 0;
 }
@@ -221,8 +217,11 @@
   padding: 0;
 }
 
-    /* Блок Review */
 .form-review__wrapper {
+  /* Блок Review */
+  display: flex;
+  width: 320px;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -231,12 +230,6 @@
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-.form-review__wrapper {
-  display: flex;
-  width: 320px;
-  justify-content: center;
 }
 
 .form-review__input {
@@ -254,4 +247,3 @@
 
   background-color: #f2f2f2;
 }
-
