@@ -22,3 +22,19 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+@media (min-width: @tablet-width) {
+  .list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .list__item {
+    border: 1px solid red;
+    margin-top: 16px;
+    margin-bottom: 18px;
+  }
+  .list__link {
+    color: #000000;
+  }
+}
