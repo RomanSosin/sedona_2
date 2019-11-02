@@ -8,7 +8,6 @@
 .tips__list {
   display: flex;
   flex-direction: column;
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -17,14 +16,12 @@
 .tips__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid red;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
 
 .tips__title {
-  align-self: flex-start;
   margin: 0;
   margin-left: 40px;
   padding: 0;
@@ -34,11 +31,35 @@
 }
 
 .tips__describe {
-  align-self: flex-start;
   margin: 0;
   margin-left: 40px;
   padding: 0;
   font-size: 14px;
   line-height: 21px;
-  border: 1px solid red;
 }
+
+@media (min-width: @tablet-width) {
+  .tips__list {
+    flex-direction: row;
+  }
+
+  .tips__item {
+    min-width: 256px; /*Фиксируем ширину по сетке в макете*/
+    align-items: center;
+  }
+
+  .tips__title {
+    border: 1px solid red;
+  }
+
+  .tips__describe {
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tips__item {
+    min-width: 400px;
+  }
+}
+
