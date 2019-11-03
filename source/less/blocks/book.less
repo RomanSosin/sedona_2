@@ -1,6 +1,7 @@
 .book {
   display: flex;
   flex-direction: column;
+
   text-transform: uppercase;
   color: #000000;
 }
@@ -14,11 +15,14 @@
 }
 
 .book__text {
+  width: 282px;
   margin: 0;
   padding: 0;
+  align-self: center;
   text-align: center;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
+  border: 1px solid red;
 }
 
 .book__find {
@@ -33,4 +37,27 @@
   color: #ffffff;
   font-weight: 700;
   background-color: #81b3d2;
+}
+
+@media (min-width: @tablet-width) {
+  .book {
+    align-items: center;
+  }
+
+  .book__title {
+    font-size: 30px;
+  }
+
+  .book__text {
+    width: 400px;
+  }
+
+  .book__find {
+    width: 458px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .book__find {
+  }
 }
