@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,4 +39,30 @@
   font-weight: 700;
   color: #000000;
   border: 1px solid red;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    flex-direction: row;
+  }
+
+  .gallery__item {
+    width: 322px;
+  }
+
+  .gallery__item--first {
+    width: 100%;
+  }
+
+  .gallery__wriper--describe {
+    position: relative; /* Задаем для абсолютного расположения gallery__like */
+    background-color: #f2f2f2;
+  }
+
+  .gallery__like {
+    z-index: 1;
+    position: absolute;
+    top: 15px;
+    right: 21px;
+  }
 }
