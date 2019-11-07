@@ -1,9 +1,8 @@
 .nav {
-  font-style: "PT Sans", arial, sans-serif;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
+  font-size: 18px;
   line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: #81b3d2;
 
   padding: 0;
@@ -13,4 +12,18 @@
 .nav__list {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .nav {
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 16px;
+    margin-bottom: 18px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

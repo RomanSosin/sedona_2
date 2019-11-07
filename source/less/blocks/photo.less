@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .photo__title {
@@ -16,13 +18,36 @@
 }
 
 .photo__describe {
+  text-align: center;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #333333;
 }
 
-.photo-gallery {
+.photo__gallery {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__wrapper {
+    width: 648px;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
+
+  .photo__describe {
+    width: 445px;
+  }
+
+  .photo__gallery {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__wrapper {
+    width: 100%;
+  }
 }
