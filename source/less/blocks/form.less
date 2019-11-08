@@ -95,12 +95,12 @@
 }
 
 .form-about__input {
-  margin-left: 20px;
+  width: 150px;
+  flex-grow: 1;
   margin-right: 20px;
   /* делаем с двух сторон марджин, чтоб не убегал лайбл от центра выравнивание */
   margin-top: 10px;
   margin-bottom: 10px;
-  flex-grow: 1;
 }
 
 .form-contacts__wrapper {
@@ -182,7 +182,7 @@
 }
 
 .form-attraction__wrapper {
-  /* Блок Attrsaction */
+  /* Блок Attraction */
   margin: 0;
   padding: 0;
 }
@@ -246,4 +246,62 @@
   font-weight: 700;
 
   background-color: #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 670px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__wrapper {
+    width: 325px;
+  }
+
+  .form-about__wrapper {
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-about__label {
+
+  }
+
+  .form-about__input {
+
+  }
+
+  .form-impression__wrapper {
+    order: -1;
+  }
+
+  .form-contacts__wrapper {
+    width: 100%;
+  }
+
+  .form-attraction__wrapper {
+    width: 100%;
+  }
+
+  .form-attraction__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .form-attraction__item {
+    width: 220px;
+    flex-grow: 1;
+  }
+
+  .form-review__wrapper {
+    width: 100%;
+  }
 }
