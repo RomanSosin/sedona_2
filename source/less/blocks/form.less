@@ -121,10 +121,8 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-
   margin: 0;
   padding: 0;
-  border: 1px solid red;
 }
 
 .form-contacts__item {
@@ -360,13 +358,14 @@
   }
 
   .form-contacts__wrapper {
-    width: 100%;
+    box-sizing: border-box;
+    width: 960px;
     margin: 0;
     padding: 0;
   }
 
   .form-contacts__list {
-    display: flex;
+    width: 960px;
     flex-direction: row;
     list-style: none;
     margin: 0;
@@ -374,9 +373,8 @@
   }
 
   .form-contacts__item {
+    width: 480px;
     flex-direction: row;
-    border: 1px solid red;
-    flex-grow: 1;
     margin: 0;
     padding: 0;
   }
