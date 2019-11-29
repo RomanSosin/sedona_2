@@ -57,11 +57,18 @@
           <input id="user-middle-name" class="form__input form-about__input form-about__middle-name" name="middle-name" type="text" value="Александрович">
         </fieldset>
         <fieldset class="form__wrapper form-contacts__wrapper">
-            <legend class="form__title form-contacts__title">Контактная информация:</legend>
-            <label class="form__label form-contacts__label" for="user-phone">Контактный телефон*:</label>
-            <input id="user-phone" class="form__input form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
-            <label class="form__label form-contacts__label" for="user-mail">Электронная почта*:</label>
-            <input id="user-mail" class="form__input form-contacts__mail" type="email" value="Введите e-mail" required>
+          <legend class="form__title form-contacts__title">Контактная информация:</legend>
+          <ul class="form-contacts__list">
+            <li class="form-contacts__item">
+              <label class="form__label form-contacts__label form-contacts__label--not_desktop" for="user-phone">Контактный телефон*:</label>
+              <label class="form__label form-contacts__label form-contacts__label--desktop" for="user-phone">Телефон*:</label>
+              <input id="user-phone" class="form__input form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
+            </li>
+            <li class="form-contacts__item">
+              <label class="form__label form-contacts__label" for="user-mail">Электронная почта*:</label>
+              <input id="user-mail" class="form__input form-contacts__mail" type="email" value="Введите e-mail" required>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__wrapper form-impression__wrapper">
           <legend class="form__title form-impression__title">Ваше общее впечатление:</legend>
