@@ -1,4 +1,5 @@
 .intro {
+  position: relative;
   width: 100%;
   overflow: hidden;
   background-image: url("/img/bg-back-mobile@1x.jpg");
@@ -7,14 +8,15 @@
   background-position: center;
   background-repeat: no-repeat;
 
-   &::after { /* Добавляем полоску внизу */
+  &::after { /* Добавляем полоску внизу */
     content: ""; 
     background-image: url("/img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
     position: absolute;
     width: 768px;
-    height: 57px;
-    top: 427px;
+    height: 27px;
+    top: 372px;
+    left: 0px;
   }
 }
 
@@ -24,11 +26,22 @@
 }
 
 @media (min-width: @tablet-width) {
-.intro {
-  min-height: 518px;
+  .intro {
+    min-height: 518px;
 
-  background-image: url("/img/bg-back-tablet@1x.jpg");
-  background-size: 768px;
+    background-image: url("/img/bg-back-tablet@1x.jpg");
+    background-size: 768px;
+
+    &::after { /* Добавляем полоску внизу */
+      content: ""; 
+      background-image: url("/img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 768px;
+      height: 57px;
+      top: 461px;
+      left: 0px;
+    }
   }
 }
 
@@ -36,5 +49,17 @@
   .intro {
     background-image: url("/img/bg-back-desktop@1x.jpg");
     background-size: 1200px;
+
+    &::after { /* Добавляем полоску внизу */
+      content: ""; 
+      background-image: url("/img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 1201px;
+      height: 65px;
+      top: 462px;
+      left: 0px;
+    }
   }
+
 }
