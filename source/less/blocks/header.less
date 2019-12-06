@@ -1,4 +1,25 @@
 .header {
+  position: relative;
   margin: 0;
   padding: 0;
+}
+
+.header__logo {
+  position: absolute;
+  z-index: 10;
+  right: 110px;
+  bottom: -49px;
+}
+
+@media (min-width: @tablet-width) {
+  .header__logo {
+    right: 333px;
+    top: 0;
+  }
+}
+
+@media (min-width: @desktop-width ) {
+  .header__logo {
+    right: 550px;
+  }
 }

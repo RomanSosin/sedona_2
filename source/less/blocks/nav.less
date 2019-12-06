@@ -3,27 +3,174 @@
   line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   background-color: #81b3d2;
-
-  padding: 0;
-  margin: 0;
 }
 
-.nav__list {
+.list__link {
+  display: block;
+  padding: 2px;
   margin: 0;
-  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #678fa8;
 }
 
-@media (min-width: @tablet-width) {
-  .nav {
-    font-size: 14px;
-    line-height: 26px;
-    margin-top: 16px;
-    margin-bottom: 18px;
-    background-color: #ffffff;
+.list__link[href] {
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
   }
 }
 
+.nav__togle { 
+  display: block;
+  width: 23px;
+  height: 23px;
+
+  margin-top: 17px;
+  margin-right: 20px;
+  margin-left: auto;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  background-image: url("/img/icon-menu.svg");
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  border: none;
+} 
+
+@media (max-width: @mobile-width-only) {
+  .nav--closed .nav__close { /* Закрытое меню */
+    display: none;
+  }
+
+  .nav--closed .nav__list {
+    display: none
+  }
+
+  .nav--open .nav__close {
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    background-color: #ffffff;
+    background-image: url("/img/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-color: #81b3d2;
+
+    cursor: pointer;
+    border: none;
+  }
+
+  .nav--nojs .nav__togle, 
+  .nav--nojs .nav__close {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: @tablet-width) {
+ .nav {
+    font-size: 14px;
+    line-height: 26px;
+
+    background-color: #ffffff;
+  }
+
+  .nav__togle, 
+  .nav__close {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-color: #ffffff;
+  }
+
+  .list__item {
+    margin-top: 16px;
+    margin-bottom: 18px;
+  }
+ 
+  .list__item:first-child {
+    margin-left: 49px;
+  }
+
+  .list__item:nth-child(2) {
+    margin-left: 77px;
+  }
+
+  .list__item:nth-child(3) {
+    margin-left: 190px;
+  }
+
+  .list__item:last-child {
+    margin-left: 50px;
+    
+  }
+
+  .list__link {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #000000;
+  }
+
+  .list__link[href] {
+    &:hover {
+      background-color: transparent;
+      color: #81b3d2;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .list__link--active {
+    color: #766357  ;
+
+    &:hover {
+      color: #604e43;
+    }
+  }
+}
+
+
+
 @media (min-width: @desktop-width) {
+    .list__item:first-child {
+    margin-left: 91px;
+  }
+
+  .list__item:nth-child(2) {
+    margin-left: 162px;
+  }
+
+  .list__item:nth-child(3) {
+    margin-left: 330px; /* Уменьшил отступ по макету, при наименьшем масштабе 
+    съезжают надписи в меню */
+  }
+
+  .list__item:last-child {
+    margin-left: 137px;
+  }
 
 }
