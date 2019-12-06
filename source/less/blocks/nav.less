@@ -13,6 +13,11 @@
   background-color: #81b3d2;
 }
 
+.list__item {
+  margin: 0;
+  padding: 0;
+}
+
 .list__link {
   display: block;
   padding: 2px;
@@ -102,38 +107,43 @@
     justify-content: flex-start;
 
     background-color: #ffffff;
+
   }
 
   .list__item {
     margin-top: 16px;
     margin-bottom: 18px;
+
   }
- 
+  
   .list__item:first-child {
     margin-left: 49px;
   }
 
   .list__item:nth-child(2) {
-    margin-left: 77px;
+    margin-left: 70px;
   }
 
   .list__item:nth-child(3) {
-    margin-left: 190px;
+   
+    margin-left: 170px;
   }
 
   .list__item:last-child {
-    margin-left: 50px;
+    margin-left: 40px;
     
   }
 
   .list__link {
     margin: 0;
     padding: 0;
+    text-align: start;
     border: none;
     color: #000000;
   }
 
   .list__link[href] {
+       
     &:hover {
       background-color: transparent;
       color: #81b3d2;
