@@ -1,13 +1,12 @@
 .advantages-list {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
   list-style: none;
 
   margin: 0 auto;
   padding: 0;
   margin-top: 7px;
-  border: 1px solid red;
+
 }
 
 .advantages-list__item {
@@ -16,9 +15,29 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  position: relative;
-  overflow: hidden;
+}
+
+.advantages-list__item--grey {
   background-color: #eeeeee;
+  padding-top: 30px;
+
+  &::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    left: 20px;
+    margin-top: 1px;
+    background-color: #d6d6d6;
+  }
+}
+
+.advantages-list__item--grey:nth-child(7)::after { /* Не понятно почему 7ой ?!! '( */
+  display: none;
+}
+
+.advantages-list__image {
+  display: block; /* Убираем белые полосы снизу и сверху изображения */
+  background-color: #000000;
 }
 
 .advantages-list__image--first {
@@ -34,28 +53,28 @@
 
 .advantages-list__item:nth-child(1) {
   order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
-  padding-top: 79px;
+  padding-top: 55px;
   color: #ffffff;
   background-color: #81b3d2;
-}
-
-.advantages-list__item:nth-child(2) {
-  padding-top: 41px;
 }
 
 .advantages-list__item:nth-child(3) {
+  padding-top: 41px;
   background-color: #81b3d2;
   color: #ffffff;
-}
-
-.tips {
-  order: -1;
 }
 
 .advantages-list__number {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  margin-bottom: 3px;
+
+  &::before, 
+  &::after {
+    content: "—";
+    margin-right: 6px;
+    margin-left: 6px;
+  }
 }
 
 .advantages-list__title {
@@ -65,6 +84,7 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
+  margin-bottom: 14px;
 }
 
 .advantages-list__describe {
@@ -75,10 +95,16 @@
   width: 280px;
   margin: 0;
   padding: 0;
+  margin-top: 20px;
+  margin-bottom: 43px;
 }
 
-.advantages-list__image {
-  background-color: #000000;
+.advantages-list__describe--grey {
+  margin-bottom: 30px;
+}
+
+.tips {
+  order: -1;
 }
 
 @media (min-width: @tablet-width) {
@@ -86,8 +112,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-
   }
+
   .advantages-list__item {
     min-width: 256px; /*Фиксируем ширину по сетке в макете*/
   }

@@ -1,6 +1,6 @@
 .advantages {
   /* Позиционирование*/
-
+  position: relative;
   /*Блочная модель*/
   display: flex;
   flex-direction: column;
@@ -13,6 +13,19 @@
 
   /*Оформление*/
   background-color: #ffffff;
+
+  &::after {
+    content: "";
+
+    background-image: url("/img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 320px;
+    height: 37px;
+    top: 198px;
+    
+  }
 }
 
 .advantages__title {
@@ -39,6 +52,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages::after {
+    display: none;
+  }
+
   .advantages__title {
     width: 470px;
 
