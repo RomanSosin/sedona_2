@@ -1,4 +1,5 @@
 .tips {
+  order: -1;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -24,6 +25,10 @@
   margin-left: 70px;
   margin-right: 20px;
   margin-top: 33px;
+
+  br {
+    display: none;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -81,20 +86,56 @@
 }
 
 @media (min-width: @tablet-width) {
+  .tips { 
+  }
+
   .tips__list {
     flex-direction: row;
+    flex-grow: 1;
   }
 
   .tips__item {
-    min-width: 256px; /*Фиксируем ширину по сетке в макете*/
+    margin: 0 45px;
+    padding: 0;
+    padding-top: 161px;
     align-items: center;
-  }
+  
+    br {
+      display: inline;
+    }
 
-  .tips__title {
-    border: 1px solid red;
+    &--home {
+      order: -2;
+    }
+
+    &--food {
+      order: -1;
+    }
+
+    &--home::before {
+      top: 55px;
+      left: 45px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &--gift:before {
+      top: 55px;
+      left: 45px;
+      width: 64px;
+      height: 75px;
+    }
+
+    &--food:before {
+      top: 55px;
+      left: 45px;
+      width: 77px;
+      height: 68px;
+    }
   }
 
   .tips__describe {
+    min-width: 166px;
     text-align: center;
   }
 }
