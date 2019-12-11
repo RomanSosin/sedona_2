@@ -38,7 +38,7 @@
     content: "";
     width: 39px;
     height: 37px;
-    position: absolute; 
+    position: absolute;
     top: -10px;
     left: -53px;
     background-image: url("/img/icon-house.svg");
@@ -49,7 +49,7 @@
     content: "";
     width: 39px;
     height: 37px;
-    position: absolute; 
+    position: absolute;
     top: -10px;
     left: -53px;
     background-image: url("/img/icon-gift.svg");
@@ -60,7 +60,7 @@
     content: "";
     width: 39px;
     height: 37px;
-    position: absolute; 
+    position: absolute;
     top: -10px;
     left: -53px;
     background-image: url("/img/icon-burger.svg");
@@ -86,22 +86,20 @@
 }
 
 @media (min-width: @tablet-width) {
-  .tips { 
-  }
-
   .tips__list {
     flex-direction: row;
     flex-grow: 1;
+    padding-top: 161px;
+    padding-bottom: 64px;
   }
 
   .tips__item {
     margin: 0 45px;
     padding: 0;
-    padding-top: 161px;
     align-items: center;
-  
+
     br {
-      display: inline;
+      display: block;
     }
 
     &--home {
@@ -113,21 +111,21 @@
     }
 
     &--home::before {
-      top: 55px;
+      top: -90px;
       left: 45px;
       width: 75px;
       height: 72px;
     }
 
     &--gift:before {
-      top: 55px;
+      top: -90px;
       left: 45px;
       width: 64px;
       height: 75px;
     }
 
     &--food:before {
-      top: 55px;
+      top: -90px;
       left: 45px;
       width: 77px;
       height: 68px;
@@ -142,7 +140,40 @@
 
 @media (min-width: @desktop-width) {
   .tips__item {
-    min-width: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 86px;
+
+    &--home::before {
+      top: -90px;
+      left: 160px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &--gift:before {
+      top: -90px;
+      left: 165px;
+      width: 64px;
+      height: 75px;
+    }
+
+    &--food:before {
+      top: -90px;
+      left: 160px;
+      width: 77px;
+      height: 68px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .tips__describe {
+    width: 300px;
+    border: 1px solid red;
   }
 }
 
