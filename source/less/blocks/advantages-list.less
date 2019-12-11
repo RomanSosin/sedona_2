@@ -13,8 +13,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
+
+  br {
+    display: none;
+  }
+
+  &:nth-child(1) {
+    order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
+    padding-top: 55px;
+    color: #ffffff;
+    background-color: #81b3d2;
+      & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
+        padding: 0 20px;
+      }
+  }
+
+  &:nth-child(3) {
+    padding-top: 41px;
+    background-color: #81b3d2;
+    color: #ffffff;
+  }
+
+  &:nth-child(6) .advantages-list__describe { /* редактируем описание №4 для правильных переносов */
+    padding: 0 30px;
+  }
 }
 
 .advantages-list__item--grey {
@@ -29,10 +54,10 @@
     margin-top: 1px;
     background-color: #d6d6d6;
   }
-}
 
-.advantages-list__item--grey:nth-child(7)::after { /* Не понятно почему 7ой ?!! '( */
-  display: none;
+  &:nth-child(7)::after { /* Не понятно почему 7ой ?!! '( */
+    display: none;
+  }
 }
 
 .advantages-list__image {
@@ -50,19 +75,6 @@
 .advantages-list__image--second {
   margin: 0;
   padding: 0;
-}
-
-.advantages-list__item:nth-child(1) {
-  order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
-  padding-top: 55px;
-  color: #ffffff;
-  background-color: #81b3d2;
-}
-
-.advantages-list__item:nth-child(3) {
-  padding-top: 41px;
-  background-color: #81b3d2;
-  color: #ffffff;
 }
 
 .advantages-list__number {
@@ -93,9 +105,8 @@
   text-align: center;
   font-size: 14px;
   line-height: 21px;
-  width: 280px;
   margin: 0;
-  padding: 0;
+  padding: 0 30px;
   margin-top: 20px;
   margin-bottom: 43px;
 }
@@ -114,13 +125,30 @@
   }
 
   .advantages-list__item {
+    justify-content: flex-start;
     box-sizing: border-box;
     width: 256px;
     padding: 0 45px;
-    border: 1px solid red;
+    padding-top: 47px;
+
+    &:nth-child(1) {
+      padding-top: 47px;
+
+        & .advantages-list__describe {
+          padding: 0;
+        }
+    }
+    &:nth-child(6) .advantages-list__describe { /* редактируем описание №4 для правильных переносов */
+          padding: 0 10px;
+    }
 
     &:nth-child(3) { /* Меняем расположение картинки с описанием */
       order: 2;
+      padding-top: 47px;
+    }
+
+    br {
+      display: block;
     }
   }
 
@@ -132,12 +160,15 @@
     order: 1;
   }
   .advantages-list__title {
+    padding-left: 5px;
+    padding-right: 5px;
     text-align: center;
+    font-size: 21px;
   }
 
   .advantages-list__describe {
     width: auto;
-    padding: 0;
+    padding: 0 2px;
     margin: 0;
     margin-top: 26px;
     margin-bottom: 47px;
@@ -149,6 +180,10 @@
     &::after {
       display: none;
     }
+  }
+
+  .advantages-list__describe--grey {
+    margin-bottom: 47px;
   }
 }
 
