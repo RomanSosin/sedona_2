@@ -139,17 +139,25 @@
 }
 
 @media (min-width: @desktop-width) {
+  .tips__list {
+    padding-bottom: 85px;
+  }
+
   .tips__item {
     width: 400px;
     box-sizing: border-box;
     margin: 0;
-    padding-bottom: 86px;
+
+    &--home br {
+      display: none;
+    }
 
     &--home::before {
       top: -90px;
       left: 160px;
       width: 75px;
       height: 72px;
+
     }
 
     &--gift:before {
@@ -165,15 +173,10 @@
       width: 77px;
       height: 68px;
     }
-
-    br {
-      display: none;
-    }
   }
 
   .tips__describe {
     width: 300px;
-    border: 1px solid red;
   }
 }
 
