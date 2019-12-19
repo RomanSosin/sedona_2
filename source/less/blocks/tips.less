@@ -1,4 +1,5 @@
 .tips {
+  width: 100%;
   order: -1;
   text-transform: uppercase;
   margin: 0;
@@ -88,15 +89,19 @@
 @media (min-width: @tablet-width) {
   .tips__list {
     flex-direction: row;
-    flex-grow: 1;
+    justify-content: space-between;
     padding-top: 161px;
     padding-bottom: 64px;
+    border: 1px solid blue;
   }
 
   .tips__item {
-    margin: 0 45px;
+    width: 210px;
+    flex-grow: 1;
+    margin: 0;
     padding: 0;
     align-items: center;
+    border: 1px solid red;
 
     br {
       display: block;
@@ -133,8 +138,9 @@
   }
 
   .tips__describe {
-    min-width: 166px;
+    width: auto;
     text-align: center;
+    border: 1px solid green;
   }
 }
 
