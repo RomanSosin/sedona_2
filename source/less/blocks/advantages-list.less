@@ -86,8 +86,8 @@
   &::before,
   &::after {
     content: "—";
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 4px;
+    margin-left: 4px;
   }
 }
 
@@ -108,7 +108,7 @@
   margin: 0;
   padding: 0 30px;
   margin-top: 20px;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
 .advantages-list__describe--grey {
@@ -120,7 +120,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 52px;
+    margin-top: 49px;
   }
 
   .advantages-list__item {
@@ -131,22 +131,17 @@
     padding-top: 47px;
 
     &:nth-child(1) {
-      padding-top: 47px;
+      padding-top: 46px;
 
         & .advantages-list__describe {
-          width: 180px;
+          width: 165px;
           padding: 0;
         }
     }
 
-     &:nth-child(6) .advantages-list__describe {
-       width: 140px;
-       padding: 0;
-    } /*на Хроме отображается правильно */
-
     &:nth-child(3) { /* Меняем расположение картинки с описанием */
       order: 2;
-      padding-top: 47px;
+      padding-top: 46px;
 
       & .advantages-list__describe {
         width: 180px;
@@ -154,18 +149,22 @@
       }
     }
 
+    &:nth-child(6) .advantages-list__describe {
+      width: 140px;
+      padding: 0;
+   } /*на Хроме отображается правильно */
+
     br {
       display: block;
     }
   }
 
   .advantages-list__item--image {
-    width: 510px; /*Временно для сетки*/
-    border: 1px solid red;
+    width: 512px; /*Временно для сетки*/
   }
 
   .advantages-list__image {
-    height: 260px;
+    height: 256px;
     width: 100%;
   }
 
@@ -178,19 +177,17 @@
     width: 150px;
     text-align: center;
     font-size: 21px;
-    border: 1px solid red;
   }
 
   .advantages-list__number {
-    margin-top: 14px;
+    margin-top: 9px;
   }
 
   .advantages-list__describe {
     width: 160px;
-    margin-top: 26px;
-    margin-bottom: 47px;
+    margin-top: 20px;
+    margin-bottom: 44px;
     padding: 0;
-    border: 1px solid blue;
   }
 
   .advantages-list__item--grey {
