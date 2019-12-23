@@ -8,18 +8,14 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  &::after { /* Добавляем полоску внизу */
+  &::before { /* Добавляем полоску внизу */
     content: "";
     background-image: url("/img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
     position: absolute;
-    width: 1200px;
+    width: 325px;
     height: 57px;
     bottom: 0px;
-    left: -440px;
-    border: 1px solid red;
   }
 }
 
