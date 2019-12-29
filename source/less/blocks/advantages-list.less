@@ -2,10 +2,8 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-
   margin: 0 auto;
   padding: 0;
-  margin-top: 27px;
 }
 
 .advantages-list__item {
@@ -22,7 +20,7 @@
 
   &:nth-child(1) {
     order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
-    padding-top: 55px;
+    padding-top: 31px;
     color: #ffffff;
     background-color: #81b3d2;
       & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
@@ -31,19 +29,15 @@
   }
 
   &:nth-child(3) {
-    padding-top: 41px;
     background-color: #81b3d2;
     color: #ffffff;
-  }
-
-  &:nth-child(6) .advantages-list__describe { /* редактируем описание №4 для правильных переносов */
-    padding: 0 30px;
   }
 }
 
 .advantages-list__item--grey {
   background-color: #eeeeee;
-  padding-top: 30px;
+  margin: 0;
+  padding-top: 0px;
 
   &::after {
     content: "";
@@ -61,6 +55,7 @@
 
 .advantages-list__image {
   display: block; /* Убираем белые полосы снизу и сверху изображения */
+  height: 260px;
   background-color: #000000;
 }
 
@@ -80,7 +75,7 @@
   line-height: 21px;
   font-weight: 400;
   margin: 0;
-  margin-top: 8px;
+  margin-top: 9px;
   padding: 0;
 
   &::before,
@@ -97,7 +92,12 @@
   line-height: 26px;
   font-weight: 700;
   margin: 0;
+  margin-top: 40px;
   padding: 0;
+}
+
+.advantages-list__title--grey {
+  margin-top: 27px;
 }
 
 .advantages-list__describe {
@@ -112,7 +112,8 @@
 }
 
 .advantages-list__describe--grey {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  width: 250px;
 }
 
 @media (min-width: @tablet-width) {
