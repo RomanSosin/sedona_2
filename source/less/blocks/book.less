@@ -24,6 +24,10 @@
   text-align: center;
   font-size: 14px;
   line-height: 24px;
+
+  & br {
+    display: none;
+  }
 }
 
 .book__find {
@@ -32,7 +36,7 @@
   margin-right: 20px;
   padding: 0;
   padding-top: 17px;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
@@ -47,14 +51,21 @@
 
   .book__title {
     font-size: 30px;
+    margin-top: 57px;
   }
 
   .book__text {
-    width: 400px;
+    width: 450px;
+    margin-top: 30px;
+
+    & br {
+      display: block;
+    }
   }
 
   .book__find {
     width: 458px;
+    margin-top: 10px;
   }
 }
 
