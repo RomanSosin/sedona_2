@@ -25,7 +25,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
   }
 
   .footer__teg {
@@ -47,11 +46,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .footer {
+    margin-top: 4px;
+  }
+
   .footer__teg {
     margin-left: 119px;
   }
 
+  .footer__social {
+    margin-top: 32px;
+  }
+
   .footer__copyright {
     margin-right: 119px;
+    margin-top: -2px;
   }
 }
