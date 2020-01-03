@@ -3,17 +3,17 @@
   width: 100%;
   overflow: hidden;
   background-image: url("/img/bg-back-mobile@1x.jpg");
-  background-color: red;
+  background-color: grey;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   &::after { /* Добавляем полоску внизу */
     content: "";
+    position: absolute;
     background-image: url("/img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
-    position: absolute;
     width: 320px;
     height: 27px;
     bottom: 0px;

@@ -1,19 +1,25 @@
 .intro-photo {
   width: 100%;
-  min-height: 180px;
+  min-height: 160px;
   overflow: hidden;
   position: relative;
-  border: 1px solid red;
-}
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
 
-.intro-photo__background {
-  position: absolute;
-  bottom: 0;
-  left: -190px;
+  &:after {
+    content:"";
+    position: absolute;
+    background-image: url("/img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 320px;
+    height: 57px;
+    bottom: 0;
+  }
 }
 
 .intro-photo__title {
-  position: absolute;
-  top: 55px;
-  right: 45px;
+  display: block;
+  margin: 50px auto;
 }
