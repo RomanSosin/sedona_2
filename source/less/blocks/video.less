@@ -184,5 +184,27 @@
   .video__panel--fullscreen {
     margin-right: 41px;
   }
+}
 
+@media (min-width: @desktop-width) {
+  .video {
+    margin-bottom: 89px;
+  }
+
+  .video__title {
+    margin-top: 72px;
+  }
+
+  .video__video {
+    width: 800px;
+    margin-top: 45px;
+  }
+
+  .video__panel {
+    width: 800px;
+
+    &::before {
+      width: 540px;
+    }
+  }
 }

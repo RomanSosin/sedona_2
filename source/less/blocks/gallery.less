@@ -87,7 +87,6 @@
 
   .gallery__item--first {
     width: 648px;
-
   }
 
   .gallery__image {
@@ -135,12 +134,21 @@
 }
 
 @media (min-width: @desktop-width) {
+  .gallery {
+    margin-top: 55px;
+  }
+
   .gallery__item {
-    position: relative;
-    flex-grow: 1;
+    position: relative; /* Для .gallery__wriper--describe */
+    width: 400px;
+  }
+
+  .gallery__item--first {
+    width: 1200px;
   }
 
   .gallery__wriper--describe {
+    box-sizing: border-box; /* Чтоб не вылезали паддинги за пределы родителя */
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -155,5 +163,10 @@
 
   .gallery__title {
     margin-top: 17px;
+  }
+
+  .gallery__like::before {
+    background-image: url("/img/icon-like_white.svg");
+    opacity: 1;
   }
 }
