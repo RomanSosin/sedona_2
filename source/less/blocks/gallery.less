@@ -77,30 +77,60 @@
 @media (min-width: @tablet-width) {
   .gallery {
     flex-direction: row;
+    margin-top: 54px;
   }
 
   .gallery__item {
     width: 50%;
+    border: 0;
   }
 
   .gallery__item--first {
-    width: 100%;
+    width: 648px;
+
   }
 
   .gallery__image {
     width: 100%;
+    height: 267px;
+    margin-top: 0;
+  }
+
+  .gallery__item--first img {
+    height: 400px;
   }
 
   .gallery__wriper--describe {
     position: relative; /* Задаем для абсолютного расположения gallery__like */
     background-color: #f2f2f2;
+    margin: 0;
+    padding-bottom: 17px;
+    padding-left: 20px;
+  }
+
+  .gallery__title {
+    margin-top: 15px;
+  }
+  .gallery__item--first .gallery__like {
+    z-index: 1;
+    position: absolute;
+    top: 20px;
+    right: 22px;
+
+    &::before {
+      left: 3px;
+    }
   }
 
   .gallery__like {
     z-index: 1;
     position: absolute;
-    top: 15px;
-    right: 21px;
+    top: 20px;
+    right: 30px;
+
+    &::before {
+      left: 3px;
+    }
   }
 }
 

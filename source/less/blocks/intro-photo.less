@@ -1,13 +1,13 @@
 .intro-photo {
   width: 100%;
-  min-height: 160px;
+  height: 160px;
   overflow: hidden;
   position: relative;
   background-image: url("/img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
 
-  &:after {
+  &::after {
     content:"";
     position: absolute;
     background-image: url("/img/bg-intro-triangle-mobile.svg");
@@ -16,10 +16,29 @@
     width: 320px;
     height: 57px;
     bottom: 0;
+    left: 0;
   }
 }
 
 .intro-photo__title {
   display: block;
   margin: 50px auto;
+}
+
+@media (min-width: @tablet-width) {
+  .intro-photo {
+    height: 290px;
+
+    &::after {
+      background-image: url("/img/bg-intro-triangle-tablet.svg");
+      background-position: left bottom;
+      width: 1200px;
+    }
+  }
+
+  .intro-photo__title {
+    display: block;
+    width: 450px;
+    margin: 95px auto;
+  }
 }

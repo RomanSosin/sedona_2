@@ -1,4 +1,5 @@
 .video {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,6 +7,16 @@
   margin-bottom: 45px;
   padding: 0;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 280px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 66px;
+  }
 }
 
 .video__title {
@@ -28,10 +39,11 @@
 }
 
 .video__video {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .video__panel {
+  position: relative;
   display: flex;
   align-items: center;
   width: 280px;
@@ -39,6 +51,31 @@
   margin: 0 auto;
   padding: 0;
   background-color: #e5e5e5;
+
+  &::before {  /* Линия прокрутки видео */
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 235px;
+    height: 3px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    left: 20px;
+    top: -20px;
+  }
+
+  &::after {  /* Круг для линии прокрутки видео */
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    left: 60px;
+    top: -23px;
+  }
 }
 
 .video__button {
@@ -68,10 +105,84 @@
 }
 
 @media (min-width: @tablet-width) {
+  .video {
+    position: relative;
+    margin-bottom: 44px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   .video__title {
     font-size: 30px;
+    margin-top: 68px;
   }
   .video__describe {
     width: 440px;
+    margin-top: 30px;
   }
+
+  .video__video {
+    width: 648px;
+    height: 500px;
+    margin-top: 48px;
+  }
+
+  .video__panel {
+    position: absolute;
+    width: 648px;
+    height: 93px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &::before {  /* Линия прокрутки видео */
+      content: "";
+      position: absolute;
+      width: 389px;
+      height: 3px;
+      background-color: #949494;
+      left: 93px;
+      top: 45px;
+    }
+
+    &::after {  /* Круг для линии прокрутки видео */
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      left: 206px;
+      top: 42px;
+    }
+  }
+
+  .video__button {
+    cursor: pointer;
+    fill: #ffffff;
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+
+    &:active {
+      fill: #949494;
+    }
+  }
+
+  .video__panel--replay {
+    margin-left: 35px;
+  }
+
+  .video__panel--subtitles {
+    margin-left: auto;
+    margin-right: 31px;
+  }
+
+  .video__panel--fullscreen {
+    margin-right: 41px;
+  }
+
 }
