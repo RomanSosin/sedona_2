@@ -59,7 +59,9 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) { /* Скрываем элементы не в фокусе и не в актичном состоянии */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden  { /* Скрываем элементы не в фокусе и не в актичном состоянии */
   position: absolute;
 
   width: 1px;

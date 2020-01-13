@@ -1,8 +1,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 278px;
+  width: 320px;
   margin: 0 auto;
+}
+
+.form__list {
+  padding-left: 20px;
 }
 
 .form__title {
@@ -19,7 +23,6 @@
 .form__label {
   margin: 0;
   padding: 0;
-
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
@@ -37,22 +40,29 @@
 }
 
 .form__input {
-  width: 150px;
   /* Делаем так, чтобы напись не вылезала за границы input */
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 16px;
   padding: 0;
-  padding-left: 20px;
-  padding-top: 18px;
-  padding-bottom: 16px;
+  padding-left: 17px;
+  padding-top: 15px;
+  padding-bottom: 17px;
 
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-
+  border: none;
   background-color: #f2f2f2;
-}
+  outline: none;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active {
+      background-color: #ffffff;
+    }
+  }
 
 .form__send {
   width: 100%;
@@ -71,14 +81,17 @@
   border: 0;
 }
 
+.form__wrapper {
+  border: none;
+}
+
 .form-about__wrapper {
   /*Блок Form-about */
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   margin-top: 20px;
   padding: 0;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5
 }
 
 .form-about__title {
@@ -86,17 +99,28 @@
   text-align: center;
 }
 
+.form-about__list {
+  margin: 0;
+  padding-right: 20px;
+  list-style: none;
+}
+
+.form-about__item {
+  display: flex;
+}
+
 .form-about__label {
   /* Выравниваем относительно input */
   align-self: center;
   margin: 0;
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 .form-about__input {
+  width: 150px;
   flex-grow: 1;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
 .form-contacts__wrapper {
@@ -107,14 +131,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5
 }
 
 .form-contacts__title {
   align-self: flex-start;
   text-align: center;
-  padding-top: 20px;
-  margin-bottom: 26px;
+  padding-top: 19px;
+  margin-bottom: 20px;
 }
 
 .form-contacts__list {
@@ -122,39 +147,60 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 
 .form-contacts__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .form-contacts__label {
   align-self: flex-start;
-  margin-left: 41px;
+  margin-left: 22px;
+  margin-bottom: 6px;
 }
 
 .form-contacts__label--desktop {
   display: none;
 }
 
-.form-contacts__phone,
-.form-contacts__mail {
+.form-contacts__mail,
+.form-contacts__phone {
   width: 222px;
   margin: 0;
-  margin-right: 48px;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+}
+
+.form-contacts__item i {
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+
+.form-contacts__icon--phone {
+  background-image: url("/img/icon-phone.svg");
+}
+
+.form-contacts__icon--mail {
+  background-image: url("/img/icon-mail.svg");
 }
 
 .form-impression__wrapper {
   /* Блок Impression */
   margin: 0;
   padding: 0;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #e5e5e5
 }
 
 .form-impression__title {
-  padding-top: 20px;
+  padding-top: 19px;
   text-align: center;
 }
 
@@ -163,31 +209,69 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 
 .form-impression__item {
   display: flex;
   margin: 0;
-  margin-bottom: 24px;
-  padding: 0;
-  border: 1px solid green;
-}
-
-.form-impression__item:last-child {
-  margin-bottom: 42px;
-}
-
-.form-impression__radio {
-  align-self: center;
-  margin: 0;
-  margin-left: 40px;
-  margin-right: 48px;
   padding: 0;
 }
 
 .form-impression__label {
-  border: 1px solid red;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 37px;
+  padding-bottom: 6px;
+  padding-left: 79px;
+
+  &::before {
+    /* Добавим стилизованные чекбоксы для полей выбора с типом radio */
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    background-color: #f2f2f2;
+  }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5
+  }
+}
+
+.form-impression__radio:checked + .form-impression__label::after {
+  /* Добавим стилизованные чекбокса при выборе */
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 17px;
+  top: 39px;
+
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  background-color: #333333;
+}
+
+.form-impression__radio:checked +.form-impression__label::before {
+  background-color: #e5e5e5;
+}
+
+.form-impression__radio:checked +.form-impression__label:active::before {
+  background-color: #d5d5d5;
+}
+
+.form-impression__radio:checked +.form-impression__label:active::after{
+  background-color: #a4a4a4;
 }
 
 .form-attraction__wrapper {
@@ -207,7 +291,6 @@
   list-style: none;
   border: 1px solid red;
   margin: 0;
-  padding: 0;
 }
 
 .form-attraction__item {
@@ -243,6 +326,7 @@
 .form-review__input {
   box-sizing: border-box;
   width: 100%;
+  resize: none; /* Невозможность растягивать окно */
   margin: 0;
   margin-top: 20px;
   padding: 0;
@@ -350,7 +434,7 @@
   }
 
   .form__wrapper {
-    width: 476px; /* Нужно 480! без рамок*/
+    width: 476px;
   }
 
   .form-about__input {

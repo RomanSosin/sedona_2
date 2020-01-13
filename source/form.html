@@ -8,39 +8,36 @@
   </head>
   <body>
     <div class="container">
-    <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="логотип сайта sedona.ru">
-      </a>
+      <header class="header">
+        <a class="header__logo logo" href="index.html">
+          <img class="header__logo-image logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="логотип сайта sedona.ru_лайтовые_правки">
+        </a>
+      <nav class="nav nav--closed nav--nojs">
+        <ul class="nav__list list">
+          <li class="list__item">
+            <a class="list__link" href="index.html">Главная</a>
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="photo.html">Фото и видео</a>
+          </li>
+          <li class="list__item">
+            <a class="list__link list__link--active">Форма отзыва</a>
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="htmlacademy.html">HTML Academy</a>
+          </li>
+        </ul>
+        <button class="nav__togle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+      </nav>
+      </header>
 
-    <nav class="nav">
-      <button class="nav__togle" type="button">Открыть меню</button>
-      <button class="nav__close" type="button">Закрыть меню</button>
-
-      <ul class="nav__list list">
-        <li class="list__item">
-          <a class="list__link" href="index.html">Главная</a>
-        </li>
-        <li class="list__item">
-          <a class="list__link" href="photo.html">Фото и видео</a>
-        </li>
-        <li class="list__item">
-          <a class="current__link">Форма отзыва</a>
-        </li>
-        <li class="list__item">
-          <a class="list__link" href="htmlacademy.html">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
-    </header>
-
-    <div class="intro-not-index intro-photo">
-      <img class="intro-photo__background" src="img/bg-back-mobile@1x.jpg" width="768" height="389">
-      <img class="intro-photo__title" src="img/text-sedona.svg" width="229" height="39" alt="Welcome Sedona">
-    </div>
+      <div class="intro-not-index intro-photo">
+        <img class="intro-photo__title" src="img/text-sedona.svg" width="229" height="39">
+      </div>
 
     <section class="review">
-      <h1 class="vissually-hidden">Отзывы путешественников</h1>
+      <h1 class="visually-hidden">Отзывы путешественников</h1>
       <h2 class="review__title">Оставьте свой отзыв</h2>
       <p class="review__describe">Помогите нашим отелям стать лучше! оставьте отзыв о них,
         а также о посещенных вами достопримечательностях</p>
@@ -49,47 +46,57 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__wrapper form-about__wrapper">
           <legend class="form__title form-about__title">Представтесь:</legend>
-          <label class="form__label form-about__label" for="user-name">Имя*:</label>
-          <input id="user-name" class="form__input form-about__input form-about__name" name="name" type="text" value="Петр"  required autofocus>
-          <label class="form__label form-about__label" for="user-surname">Фамилия*:</label>
-          <input id="user-surname" class="form__input form-about__input form-about__surname" name="surname" type="text" value="Иванов" required>
-          <label class="form__label form-about__label" for="user-middle-name">Отчество:</label>
-          <input id="user-middle-name" class="form__input form-about__input form-about__middle-name" name="middle-name" type="text" value="Александрович">
+          <ul class="form__list form-about__list">
+            <li class="form-about__item">
+              <label class="form__label form-about__label" for="user-name">Имя*:</label>
+              <input id="user-name" class="form__input form-about__input form-about__name" name="name" type="text" value="Петр"  required autofocus>
+            </li>
+            <li class="form-about__item">
+              <label class="form__label form-about__label" for="user-surname">Фамилия*:</label>
+              <input id="user-surname" class="form__input form-about__input form-about__surname" name="surname" type="text" value="Иванов" required>
+            </li>
+            <li class="form-about__item">
+              <label class="form__label form-about__label" for="user-middle-name">Отчество:</label>
+              <input id="user-middle-name" class="form__input form-about__input form-about__middle-name" name="middle-name" type="text" value="Александрович">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__wrapper form-contacts__wrapper">
           <legend class="form__title form-contacts__title">Контактная информация:</legend>
-          <ul class="form-contacts__list">
+          <ul class="form__list form-contacts__list">
             <li class="form-contacts__item">
               <label class="form__label form-contacts__label form-contacts__label--not_desktop" for="user-phone">Контактный телефон*:</label>
               <label class="form__label form-contacts__label form-contacts__label--desktop" for="user-phone">Телефон*:</label>
               <input id="user-phone" class="form__input form-contacts__phone" type="tel" pattern="[0-9]{7,11}" value="Введите телефон" required>
+              <i class="form-contacts__icon--phone"></i>
             </li>
             <li class="form-contacts__item">
               <label class="form__label form-contacts__label" for="user-mail">Электронная почта*:</label>
               <input id="user-mail" class="form__input form-contacts__mail" type="email" value="Введите e-mail" required>
+              <i class="form-contacts__icon--mail"></i>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__wrapper form-impression__wrapper">
           <legend class="form__title form-impression__title">Ваше общее впечатление:</legend>
-          <ul class="form-impression__list">
+          <ul class="form__list form-impression__list">
             <li class="form-impression__item">
-              <input id="impression-positive" class="form-impression__radio form-impression__good" type="radio" value="impression-good" name="impression">
+              <input id="impression-positive" class="visually-hidden form-impression__radio" type="radio" value="impression-good" name="impression">
               <label class="form__label--radio form-impression__label" for="impression-positive">Скорее положительные</label>
             </li>
             <li class="form-impression__item">
-              <input id="impression-negative" class="form-impression__radio form-impression__negative" type="radio" value="impression-negative" name="impression">
+              <input id="impression-negative" class="visually-hidden form-impression__radio" type="radio" value="impression-negative" name="impression">
               <label class="form__label--radio form-impression__label" for="impression-negative">Скорее отрицательное</label>
             </li>
             <li class="form-impression__item">
-              <input id="impression-not-sure" class="form-impression__radio form-impression__not-sure" type="radio" value="impression-not-sure" name="impression">
+              <input id="impression-not-sure" class="visually-hidden form-impression__radio" type="radio" value="impression-not-sure" name="impression">
               <label class="form__label--radio form-impression__label" for="impression-not-sure">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__wrapper form-attraction__wrapper">
           <legend class="form__title form-attraction__title">Посещенные достопримечательности:</legend>
-          <ul class="form-attraction__list">
+          <ul class="form__list form-attraction__list">
             <li class="form-attraction__item">
               <input id="devil-bridge" class="form-attraction__checkbox form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
               <label class="form__label--checkbox" for="devil-bridge">Мост Дьявола</label>
@@ -146,5 +153,34 @@
       </div>
       </footer>
   </div>
+
+  <script>
+    var navMain = document.querySelector('.nav');
+    var navToggle = document.querySelector('.nav__togle'); /* Если JS включен, находит нужные классы и см. ниже */
+    var navClose = document.querySelector('.nav__close');
+
+    navMain.classList.remove('nav--nojs'); /* Удаляет класс main-nav--nojs */
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('nav--closed')) {
+        navMain.classList.remove('nav--closed');
+        navMain.classList.add('nav--open');
+      } else {
+        navMain.classList.add('nav--closed');
+        navMain.classList.remove('nav--open');
+      }
+    });
+
+    navClose.addEventListener('click', function() {
+      if (navMain.classList.contains('nav--open')) {
+        navMain.classList.remove('nav--open');
+        navMain.classList.add('nav--closed');
+      } else {
+        navMain.classList.add('nav--closed');
+        navMain.classList.remove('nav--open');
+      }
+    });
+  </script>
+
   </body>
 </html>
