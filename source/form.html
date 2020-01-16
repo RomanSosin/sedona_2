@@ -82,15 +82,15 @@
           <ul class="form__list form-impression__list">
             <li class="form-impression__item">
               <input id="impression-positive" class="visually-hidden form-impression__radio" type="radio" value="impression-good" name="impression">
-              <label class="form__label--radio form-impression__label" for="impression-positive">Скорее положительные</label>
+              <label class="form-impression__label" for="impression-positive">Скорее положительные</label>
             </li>
             <li class="form-impression__item">
               <input id="impression-negative" class="visually-hidden form-impression__radio" type="radio" value="impression-negative" name="impression">
-              <label class="form__label--radio form-impression__label" for="impression-negative">Скорее отрицательное</label>
+              <label class="form-impression__label" for="impression-negative">Скорее отрицательное</label>
             </li>
             <li class="form-impression__item">
               <input id="impression-not-sure" class="visually-hidden form-impression__radio" type="radio" value="impression-not-sure" name="impression">
-              <label class="form__label--radio form-impression__label" for="impression-not-sure">Затрудняюсь ответить</label>
+              <label class="form-impression__label" for="impression-not-sure">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
@@ -98,30 +98,30 @@
           <legend class="form__title form-attraction__title">Посещенные достопримечательности:</legend>
           <ul class="form__list form-attraction__list">
             <li class="form-attraction__item">
-              <input id="devil-bridge" class="form-attraction__checkbox form-attraction__devil-bridge" type="checkbox" name="devil-bridge" checked>
-              <label class="form__label--checkbox" for="devil-bridge">Мост Дьявола</label>
+              <input id="devil-bridge" class="visually-hidden form-attraction__checkbox" type="checkbox" name="devil-bridge" checked>
+              <label class="form-attraction__label" for="devil-bridge">Мост Дьявола</label>
             </li>
             <li class="form-attraction__item">
-              <input id="bell-mountain" class="form-attraction__checkbox form-attraction__bell-mountain" type="checkbox" name="bell-mountain" checked>
-              <label class="form__label--checkbox" for="bell-mountain">Гора Колокол</label>
+              <input id="bell-mountain" class="visually-hidden form-attraction__checkbox" type="checkbox" name="bell-mountain" checked>
+              <label class="form-attraction__label" for="bell-mountain">Гора Колокол</label>
             </li>
             <li class="form-attraction__item">
-              <input id="slide-park" class="form-attraction__checkbox form-attraction__slide-park" type="checkbox" name="slide-park" checked>
-              <label class="form__label--checkbox" for="slide-park">Слайд-парк</label>
+              <input id="slide-park" class="visually-hidden form-attraction__checkbox" type="checkbox" name="slide-park" checked>
+              <label class="form-attraction__label" for="slide-park">Слайд-парк</label>
             </li>
             <li class="form-attraction__item">
-              <input id="red-rock" class="form-attraction__checkbox form-attraction__red-rock" type="checkbox" name="red-rock">
-              <label class="form__label--checkbox" for="red-rock">Красные скалы</label>
+              <input id="red-rock" class="visually-hidden form-attraction__checkbox" type="checkbox" name="red-rock">
+              <label class="form-attraction__label" for="red-rock">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__wrapper form-review__wrapper">
           <legend class="form__title form-review__title">Опишите свои эмоции:</legend>
           <div class="form-review__wrapper">
-          <textarea class="form-review__input" id="review-text" name="form-review" rows="5" cols="0">Опишите подробно все свои восторги</textarea>
+          <textarea class="form-review__input" id="review-text" name="form-review" rows="6" cols="0">Опишите подробно все свои восторги</textarea>
           </div>
         </fieldset>
-        <input class="form__send button__review" name="form-button" type="submit" value="отправить отзыв">
+        <input class="form__send button__send" name="form-button" type="submit" value="отправить отзыв">
       </form>
 
     <footer class="footer">
@@ -149,7 +149,10 @@
       <div class="footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive" aria-label="Сайт HTML Academy разработавших сайт Sedona">
-          <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
       </div>
       </footer>
   </div>

@@ -65,20 +65,8 @@
   }
 
 .form__send {
-  width: 100%;
-  padding: 0;
-  padding-top: 19px;
-  padding-bottom: 19px;
-  padding-left: 44px;
-  padding-right: 49px;
-  text-transform: uppercase;
-  font-size: 21px;
-  line-height: 26px;
-  color: #ffffff;
-  font-weight: 700;
-
-  background-color: #81b3d2;
-  border: 0;
+  margin-top: 50px;
+  margin-bottom: 43px;
 }
 
 .form__wrapper {
@@ -193,9 +181,10 @@
 
 .form-impression__wrapper {
   /* Блок Impression */
+  font-size: 18px;
   margin: 0;
   padding: 0;
-  padding-bottom: 36px;
+  padding-bottom: 33px;
   border-bottom: 1px solid #e5e5e5
 }
 
@@ -222,7 +211,7 @@
   cursor: pointer;
   user-select: none;
   padding-top: 37px;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
   padding-left: 79px;
 
   &::before {
@@ -248,7 +237,7 @@
 }
 
 .form-impression__radio:checked + .form-impression__label::after {
-  /* Добавим стилизованные чекбокса при выборе */
+  /* Стилизуем чекбоксы при выборе */
   content: "";
   position: absolute;
   z-index: 3;
@@ -270,14 +259,17 @@
   background-color: #d5d5d5;
 }
 
-.form-impression__radio:checked +.form-impression__label:active::after{
+.form-impression__radio:checked +.form-impression__label:active::after {
   background-color: #a4a4a4;
 }
 
 .form-attraction__wrapper {
   /* Блок Attraction */
+  font-size: 18px;
   margin: 0;
   padding: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e5e5
 }
 
 .form-attraction__title {
@@ -289,24 +281,71 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  border: 1px solid red;
   margin: 0;
 }
 
 .form-attraction__item {
   display: flex;
   margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-  border: 1px solid green;
+  padding-bottom: 26px;
+  padding-top: 31px;
+  padding-left: 78px;
 }
 
-.form-attraction__checkbox {
-  align-self: center;
-  margin: 0;
-  margin-left: 40px;
-  margin-right: 40px;
-  padding: 0;
+.form-attraction__label {
+  /* Добавим стилизованные чекбоксы для полей выбора с типом checkbox */
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    left: -79px;
+    top: -16px;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 5px;
+
+    background-color: #f2f2f2;
+  }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5
+  }
+}
+
+.form-attraction__checkbox:checked + .form-attraction__label::after {
+  /* Стилизуем чекбоксы при выборе */
+    content: "";
+    position: absolute;
+    z-index: 3;
+    left: -62px;
+    top: 3px;
+
+    width: 30px;
+    height: 20px;
+    background-image: url("img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.form-attraction__radio:checked +.form-attraction__label::before {
+  background-color: #e5e5e5;
+}
+
+.form-attraction__radio:checked +.form-attraction__label:active::before {
+  background-color: #d5d5d5;
+}
+
+.form-attraction__radio:checked +.form-attraction__label:active::after {
+  background-color: #a4a4a4;
 }
 
 .form-review__wrapper {
@@ -321,23 +360,25 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  padding-top: 19px;
 }
 
 .form-review__input {
   box-sizing: border-box;
-  width: 100%;
+  width: 279px;
+  height: 160px;
   resize: none; /* Невозможность растягивать окно */
   margin: 0;
-  margin-top: 20px;
+  margin-top: 17px;
   padding: 0;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding-top: 13px;
+  padding-left: 19px;
   padding-right: 20px;
 
   font-size: 16px;
   line-height: 26px;
   font-weight: 700;
-
+  outline: none; /* Убираем обводку */
   background-color: #f2f2f2;
 }
 
