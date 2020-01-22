@@ -113,8 +113,6 @@
 
 .form-contacts__wrapper {
   /* Блок Form-contacts */
-  display: flex;
-  flex-direction: column;
   /* не уверен нужно ли тут бордер-бокс*/
   box-sizing: border-box;
   margin: 0;
@@ -185,7 +183,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 33px;
-  border-bottom: 1px solid #e5e5e5
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .form-impression__title {
@@ -379,6 +377,7 @@
   line-height: 26px;
   font-weight: 700;
   outline: none; /* Убираем обводку */
+  border: 0;
   background-color: #f2f2f2;
 }
 
@@ -386,16 +385,18 @@
   .form {
     width: 670px;
     margin: 0 auto;
+    margin-top: 58px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .form__wrapper {
-    width: 331px;
+    width: 334px;
   }
 
   .form__input {
-    width: 178px;
+    width: 216px;
+    padding-left: 24px;
   }
 
   .form__title {
@@ -403,69 +404,205 @@
   }
 
   .form-impression__wrapper {
+    width: 332px;
+    position: relative;
     order: -1;
-    flex-grow: 1;
+    flex-grow: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 291px;
+      background-color: #e5e5e5;
+      right: -3px;
+      top: 4px;
+    }
   }
 
   .form-impression__title {
     padding: 0;
+    padding-left: 10px;
+    text-align: left;
   }
 
-  .form-impression__radio {
-    margin-left: 30px;
-    margin-right: 50px;
+  .form-impression__list {
+    margin-top: 73px;
   }
+
+  .form-impression__item {
+    margin-bottom: 46px;
+  }
+
+  .form-impression__label {
+    padding-top: 0;
+    padding-left: 66px;
+
+    &::before {
+      left: -8px;
+      top: -15px;
+    }
+  }
+
+  .form-impression__radio:checked + .form-impression__label::after {
+    left: 8px;
+    top: 2px;
+  }
+
 
   .form-about__wrapper {
-    flex-grow: 1;
+    width: 335px;
+    flex-grow: 0;
     margin: 0;
-    padding: 0;
+    margin-left: 0;
+    border-bottom: 0;
+  }
+
+  .form-about__list {
+    margin-top: 36px;
+    padding-right: 0;
+
+  }
+
+  .form-about__title {
+    text-align: left;
+    padding-left: 61px;
+  }
+
+  .form-about__item {
+    padding-left: 30px;
+    padding-right: 5px;
+  }
+
+  .form-about__input {
+    width: 160px;
+    margin-top: 8px;
+    margin-right: 3px;
+    margin-left: 17px;
   }
 
   .form-about__label {
-    margin-left: 60px;
+    margin-left: 8px;
+    margin-right: 0;
+
   }
 
   .form-contacts__wrapper {
     width: 100%;
+    margin-top: 29px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 0;
+  }
+
+  .form-contacts__title {
+    padding-top: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .form-contacts__list {
+    padding-left: 1px;
+  }
+
+  .form-contacts__item {
+    margin-left: 0;
+    flex-direction: row;
+  }
+
+  .form-contacts__label {
+    margin-top: 5px;
+    margin-left: 21px;
+    margin-bottom: 4px;
   }
 
   .form-contacts__phone,
   .form-contacts__mail {
     width: 590px;
     margin: 0;
-    margin-right: 50px;
-    margin-top: 9px;
-    margin-bottom: 14px;
-}
+    margin-top: 3px;
+    margin-bottom: 18px;
+  }
+
+  .form-contacts__item i {
+    margin-top: 3px;
+  }
 
   .form-attraction__wrapper {
     width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 0;
+  }
+
+  .form-attraction__title {
+    width: 350px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .form-attraction__list {
+    margin: 0 auto;
+    margin-top: 26px;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-left: 100px;
-    margin-right: 100px;
   }
 
   .form-attraction__item {
-    width: 220px;
-    flex-grow: 1;
+    width: 140px;
+    flex-grow: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 8px;
   }
 
   .form-review__wrapper {
     width: 100%;
+    margin-top: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .form-review__title {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .form-review__input {
     width: 100%;
-    margin-top: 57px;
+    margin-top: 55px;
   }
 
   .form__send {
     width: 324px;
+    position: relative;
+    margin-top: 59px;
+    margin-bottom: 0;
+    margin-left: 11px;
+  }
+
+  .form__send--wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    &::after {
+      content: "* – обязательные поля";
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      position: absolute;
+      width: 170px;
+      top: 81px;
+      left: 500px;
+    }
   }
 }
 
