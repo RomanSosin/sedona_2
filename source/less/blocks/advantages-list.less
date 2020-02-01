@@ -120,7 +120,7 @@
   .advantages-list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: 39px;
   }
 
@@ -160,15 +160,10 @@
     }
   }
 
-  .advantages-list__item--image {
-    width: 512px; /*Временно для сетки*/
-  }
-
   .advantages-list__image {
+    width: 512px;
     height: 256px;
-    width: 100%;
   }
-
 
   .advantages-list__image--second { /* Меняем расположение картинки с описанием */
     order: 1;
@@ -223,13 +218,15 @@
     }
   }
 
-  .advantages-list__item--image {
-    width: 800px; /*Временно для сетки*/
-  }
-
   .advantages-list__title {
     width: 150px;
     margin-top: 8px;
+  }
+
+
+  .advantages-list__image {
+    width: 800px;
+    object-fit: cover;
   }
 
   .advantages-list__describe {

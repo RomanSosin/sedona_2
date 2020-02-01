@@ -1,8 +1,10 @@
 .intro {
   position: relative;
-  width: 100%;
+  width: auto;
+  height: 389px;
   overflow: hidden;
   background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-size: 768px 389px;
   background-color: grey;
   background-size: cover;
   background-position: center;
@@ -16,8 +18,8 @@
     background-position: center bottom;
     width: 320px;
     height: 27px;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -44,6 +46,12 @@
       left: 0px;
     }
   }
+
+  .intro__title {
+    width: 460px;
+    margin: 0 auto;
+    margin-top: 77px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -61,5 +69,11 @@
       top: 461px;
       left: 0px;
     }
+  }
+
+  .intro__title {
+    width: 460px;
+    margin: 0 auto;
+    margin-top: 77px;
   }
 }

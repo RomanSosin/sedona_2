@@ -9,8 +9,12 @@
   <body>
     <div class="container">
     <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="логотип сайта sedona.ru_лайтовые_правки">
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="header__logo-image logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="логотип сайта sedona.ru_лайтовые_правки">
+        <picture>
       </a>
     <nav class="nav nav--closed nav--nojs">
       <ul class="nav__list list">
@@ -33,7 +37,7 @@
     </header>
 
     <div class="intro">
-      <img class="intro__title" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome to the gorgeous SEDONA">
+        <img class="intro__title" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome to the gorgeous SEDONA">
     </div>
 
     <section class="advantages">
@@ -48,7 +52,11 @@
           <p class="advantages-list__describe">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </li>
         <li class="advantages-list__item--image advantages-list__image--first">
-          <img class="advantages-list__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="фотография с изображением улицы в Седоне">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg">
+            <img class="advantages-list__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="фотография с изображением улицы в Седоне">
+          </picture>
         </li>
         <li class="advantages-list__item">
           <p class="advantages-list__number">№2</p>
@@ -56,7 +64,11 @@
           <p class="advantages-list__describe">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </li>
         <li class="advantages-list__item--image advantages-list__image--second">
-          <img class="advantages-list__image" src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Фотография с изображением моста Дьявола">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
+            <img class="advantages-list__image" src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Фотография с изображением моста Дьявола">
+          </picture>
         </li>
         <li class="advantages-list__item advantages-list__item--grey">
           <p class="advantages-list__number">№3</p>
@@ -101,7 +113,11 @@
     </section>
 
     <section class="map">
-      <img class="map__image" src="img/bg-map-mobile@1x.jpg" width="320" height="340" alt="Мы находимся по адресу">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
+        <img class="map__image" src="img/bg-map-mobile@1x.jpg" width="320" height="340" alt="Мы находимся по адресу">
+      </picture>
     </section>
 
     <footer class="footer">
