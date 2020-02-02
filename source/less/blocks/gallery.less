@@ -22,12 +22,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  margin: 0 auto;
   border-top: 1px solid #e5e5e5;
 }
 
 .gallery__image {
-  align-self: center;
+  display: block;
+  margin: 0 auto;
   margin-top: 22px;
 }
 
@@ -54,6 +55,7 @@
   margin-bottom: 16px;
   font-size: 13px;
   font-weight: 700;
+  cursor: pointer;
 
   &:hover::before {
     opacity: 0.6;
@@ -83,6 +85,7 @@
   .gallery__item {
     width: 50%;
     border: 0;
+    margin: 0;
   }
 
   .gallery__item--first {
@@ -124,11 +127,11 @@
   .gallery__like {
     z-index: 1;
     position: absolute;
-    top: 20px;
+    top: 22px;
     right: 30px;
 
     &::before {
-      left: 3px;
+      left: 5px;
     }
   }
 }
