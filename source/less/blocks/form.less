@@ -61,12 +61,14 @@
 
     &:focus {
       background-color: #ffffff;
-      outline: 1px solid #e5e5e5;
+      border: 4px solid #e5e5e5;
+      padding-top: 11px;
+      padding-bottom: 13px;
+      padding-left: 13px;
     }
 
     &:active {
-      background-color: #d5d5d5;
-      outline: 1px solid #e5e5e5;
+      background-color: #e5e5e5;
     }
   }
 
@@ -407,6 +409,14 @@
   .form__input {
     width: 216px;
     padding-left: 24px;
+
+    &:focus {
+      padding-left: 20px;
+    }
+
+    &:active {
+      background-color: #e5e5e5;
+    }
   }
 
   .form__title {
