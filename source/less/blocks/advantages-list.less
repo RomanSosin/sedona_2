@@ -23,8 +23,9 @@
     padding-top: 31px;
     color: #ffffff;
     background-color: #81b3d2;
+
       & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
-        padding: 0 20px;
+        width: 280px;
       }
   }
 
@@ -37,7 +38,6 @@
 .advantages-list__item--grey {
   background-color: #eeeeee;
   margin: 0;
-  padding-top: 0px;
 
   &::after {
     content: "";
@@ -48,7 +48,7 @@
     background-color: #d6d6d6;
   }
 
-  &:nth-child(7)::after { /* Не понятно почему 7ой ?!! '( */
+  &:nth-child(7)::after {
     display: none;
   }
 }
@@ -61,13 +61,6 @@
 
 .advantages-list__image--first {
   order: -2;
-  margin: 0;
-  padding: 0;
-}
-
-.advantages-list__image--second {
-  margin: 0;
-  padding: 0;
 }
 
 .advantages-list__number {
@@ -101,14 +94,14 @@
 }
 
 .advantages-list__describe {
-  display: inline-block;
   text-align: center;
   font-size: 14px;
   line-height: 21px;
+  width: 260px;
   margin: 0;
-  padding: 0 30px;
   margin-top: 14px;
   margin-bottom: 40px;
+  padding: 0;
 }
 
 .advantages-list__describe--grey {
@@ -121,38 +114,40 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 39px;
+    align-items: center;
+    margin-top: 38px;
   }
 
   .advantages-list__item {
     justify-content: flex-start;
     box-sizing: border-box;
     width: 256px;
+    min-height: 256px;
     padding: 0;
-    padding-top: 47px;
 
     &:nth-child(1) {
-      padding-top: 46px;
+      padding-top: 0px;
 
         & .advantages-list__describe {
           width: 165px;
-          padding: 0;
         }
     }
 
     &:nth-child(3) { /* Меняем расположение картинки с описанием */
       order: 2;
-      padding-top: 46px;
+      padding-top: 0px;
+
+      & .advantages-list__title {
+        width: 180px;
+      }
 
       & .advantages-list__describe {
         width: 180px;
-        padding: 0;
       }
     }
 
     &:nth-child(6) .advantages-list__describe {
       width: 140px;
-      padding: 0;
    } /*на Хроме отображается правильно */
 
     br {
@@ -173,7 +168,7 @@
     width: 150px;
     text-align: center;
     font-size: 21px;
-    margin-top: 0px;
+    margin-top: 45px;
   }
 
   .advantages-list__number {
@@ -183,7 +178,7 @@
   .advantages-list__describe {
     width: 160px;
     margin-top: 20px;
-    margin-bottom: 44px;
+    margin-bottom: 0px;
     padding: 0;
   }
 
@@ -199,7 +194,7 @@
 @media (min-width: @desktop-width) {
   .advantages-list__item {
     width: 400px; /*Фиксируем ширину по сетке в макете*/
-    padding-top: 54px;
+
 
     &:nth-child(1) .advantages-list__describe {
       width: 280px;
@@ -220,7 +215,7 @@
 
   .advantages-list__title {
     width: 150px;
-    margin-top: 8px;
+    margin-top: 52px;
   }
 
 
@@ -233,12 +228,11 @@
     width: 290px;
     padding: 0;
     margin: 0;
-    margin-top: 20px;
-    margin-bottom: 57px;
+    margin-top: 21px;
   }
 
   .advantages-list__title--grey {
-    margin-top: -8px;
+    margin-top: 46px;
   }
 
   .advantages-list__describe--grey {
