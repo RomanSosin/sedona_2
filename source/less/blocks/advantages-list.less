@@ -18,38 +18,35 @@
     display: none;
   }
 
-  &:nth-child(1) {
-    order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
-    padding-top: 31px;
+  &--blue {
     color: #ffffff;
     background-color: #81b3d2;
+  }
+
+  &--grey {
+    background-color: #eeeeee;
+
+    &::after {
+      content: "";
+      width: 280px;
+      height: 1px;
+      left: 20px;
+      margin-top: 1px;
+      background-color: #d6d6d6;
+    }
+
+    &:nth-child(7)::after { /* Полоска под последним элементом */
+      display: none;
+    }
+  }
+
+    &:nth-child(1) {
+      order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
+      padding-top: 31px;
 
       & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
         width: 280px;
       }
-  }
-
-  &:nth-child(3) {
-    background-color: #81b3d2;
-    color: #ffffff;
-  }
-}
-
-.advantages-list__item--grey {
-  background-color: #eeeeee;
-  margin: 0;
-
-  &::after {
-    content: "";
-    width: 280px;
-    height: 1px;
-    left: 20px;
-    margin-top: 1px;
-    background-color: #d6d6d6;
-  }
-
-  &:nth-child(7)::after {
-    display: none;
   }
 }
 
@@ -69,7 +66,6 @@
   font-weight: 400;
   margin: 0;
   margin-top: 9px;
-  padding: 0;
 
   &::before,
   &::after {
@@ -84,13 +80,11 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  margin: 0;
   margin-top: 40px;
-  padding: 0;
-}
 
-.advantages-list__title--grey {
-  margin-top: 27px;
+  &--grey {
+    margin-top: 27px;
+  }
 }
 
 .advantages-list__describe {
@@ -98,15 +92,13 @@
   font-size: 14px;
   line-height: 21px;
   width: 260px;
-  margin: 0;
   margin-top: 14px;
   margin-bottom: 40px;
-  padding: 0;
-}
 
-.advantages-list__describe--grey {
-  margin-bottom: 27px;
-  width: 250px;
+  &--grey {
+    margin-bottom: 27px;
+    width: 250px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -123,7 +115,6 @@
     box-sizing: border-box;
     width: 256px;
     min-height: 256px;
-    padding: 0;
 
     &:nth-child(1) {
       padding-top: 0px;
@@ -148,7 +139,7 @@
 
     &:nth-child(6) .advantages-list__describe {
       width: 140px;
-   } /*на Хроме отображается правильно */
+    } /*на Хроме отображается правильно */
 
     br {
       display: block;
@@ -179,7 +170,6 @@
     width: 160px;
     margin-top: 20px;
     margin-bottom: 0px;
-    padding: 0;
   }
 
   .advantages-list__item--grey {
