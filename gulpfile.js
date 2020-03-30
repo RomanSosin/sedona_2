@@ -11,6 +11,7 @@ var postcss = require("gulp-postcss"); /* Подключаем post-css для �
 var autoprefixer = require("autoprefixer"); /* Подключаем автопрефиксер для postcss префиксы для старых браузеров */
 var server = require("browser-sync").create(); /* Запускаем локальный сервер с помощью browser-sync */
 var csso = require("gulp-csso"); /* Подключаем минимизатор для CSS */
+var htmlmin = require("gulp-htmlmin"); /* Подключаем минимизатор HTML */
 var rename = require("gulp-rename"); /* Подключаем gulp-rename для переименование файлов */
 var imagemin = require("gulp-imagemin"); /* Подключаем плагин gulp-imagemin */
 var webp = require("gulp-webp"); /* Подключаем webp оптимизатор */
@@ -75,6 +76,13 @@ gulp.task("html", function () { /* Вставляем спрайт в html фа�
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true })) /* Минимизатор HTML */
+    /*.pipe(rename(function (path) {
+        path.basename += ".min";
+    }))
+    .pipe(rename({
+     suffix: "-min"
+    }))*/
     .pipe(gulp.dest("build"));
 });
 
