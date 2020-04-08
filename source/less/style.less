@@ -35,7 +35,7 @@ body {
   width: 320px;
   margin: 0 auto;
   padding: 0;
-  box-shadow: 0 0px 10px 0px #000000;
+  box-shadow: 0 0 10px 0 #000000;
 }
 
 @media (min-width: @tablet-width) {
@@ -61,7 +61,7 @@ img {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden  { /* Скрываем элементы не в фокусе и не в актичном состоянии */
+input[type="radio"].visually-hidden { /* Скрываем элементы не в фокусе и не в актичном состоянии */
   position: absolute;
 
   width: 1px;
@@ -78,18 +78,23 @@ input[type="radio"].visually-hidden  { /* Скрываем элементы не
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .feedback ul {
-  list-style: none
+  list-style: none;
 }
+
 .feedback p {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after { box-sizing: inherit; }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

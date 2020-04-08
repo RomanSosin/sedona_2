@@ -40,13 +40,13 @@
     }
   }
 
-    &:nth-child(1) {
-      order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
-      padding-top: 31px;
+  &:nth-child(1) {
+    order: -3; /* Меняем расположение флекс элементов что-бы расположить tips */
+    padding-top: 31px;
 
-      & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
-        width: 280px;
-      }
+    & .advantages-list__describe { /* редактируем описание №1 для правильных переносов */
+      width: 280px;
+    }
   }
 }
 
@@ -117,16 +117,16 @@
     min-height: 256px;
 
     &:nth-child(1) {
-      padding-top: 0px;
+      padding-top: 0;
 
-        & .advantages-list__describe {
-          width: 165px;
-        }
+      & .advantages-list__describe {
+        width: 165px;
+      }
     }
 
     &:nth-child(3) { /* Меняем расположение картинки с описанием */
       order: 2;
-      padding-top: 0px;
+      padding-top: 0;
 
       & .advantages-list__title {
         width: 180px;
@@ -171,7 +171,7 @@
   .advantages-list__describe {
     width: 160px;
     margin-top: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .advantages-list__item--grey {
